@@ -1,0 +1,62 @@
+# =============================================================================
+# Odoo + PostgreSQL 
+# -----------------------------------------------------------------------------
+
+name: odoo
+
+# Rotación de logs compartida por ambos servicios (máx. 3 archivos de 10 MB).
+x-logging: &logging
+  driver: json-file
+  options:
+    max-size: "10m"
+    max-file: "3"
+
+services:
+
+  # ---------------------------------------------------------------------------
+  # Servicio 1: Base de datos PostgreSQL
+  # ---------------------------------------------------------------------------
+  db:
+    image: postgres:16
+    environment:
+      POSTGRES_DB: postgres
+      POSTGRES_USER: odoo
+      POSTGRES_PASSWORD: CAMBIAR_PASSWORD
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U odoo -d postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+    logging: *logging
+
+  # ---------------------------------------------------------------------------
+  # Servicio 2: Odoo
+  # ---------------------------------------------------------------------------
+  odoo:
+    image: odoo:19.0
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      HOST: db
+      PORT: 5432
+      USER: odoo
+      # Debe ser la misma que POSTGRES_PASSWORD (el sed cambia las dos).
+      PASSWORD: CAMBIAR_PASSWORD
+    # Un solo hilo de tareas programadas (por defecto son 2): algo menos de RAM.
+    command: ["--max-cron-threads=1"]
+    # Sin "127.0.0.1:" delante: Odoo escucha en todas las interfaces de la VM.
+    # Quién puede entrar lo controla el firewall de GCP, no Docker.
+    ports:
+      - "8069:8069"
+    volumes:
+      - odoo-web-data:/var/lib/odoo
+    restart: unless-stopped
+    logging: *logging
+
+volumes:
+  odoo-db-data:    # Datos de PostgreSQL (todas las bases de datos de Odoo)
+  odoo-web-data:   # Filestore de Odoo (archivos adjuntos y sesiones)
