@@ -1,0 +1,11 @@
+ID_Cliente,Nombre,Segmento,Zona,Latitud,Longitud,Ventas_ultimo_trimestre_Q
+C001,Supermercado La Económica,Mayorista,Zona 1,14.6407,-90.5133,48500
+C002,Tienda Don Chepe,Minorista,Zona 6,14.655,-90.5,6200
+C003,Cafetería Reforma,Horeca,Zona 10,14.6,-90.51,12800
+C004,Abarrotería El Sol,Minorista,Mixco,14.6333,-90.6064,5400
+C005,Distribuidora del Sur,Mayorista,Villa Nueva,14.5269,-90.5875,61200
+C006,Hotel Las Américas,Horeca,Zona 13,14.585,-90.53,23900
+C007,Mini Súper Zona 18,Minorista,Zona 18,14.65,-90.48,7100
+C008,Restaurante El Portal,Horeca,Zona 1,14.643,-90.514,9800
+C009,Comercial San Cristóbal,Mayorista,Mixco,14.605,-90.58,39400
+C010,Tienda La Bendición,Minorista,Zona 11,14.61,-90.545,4800

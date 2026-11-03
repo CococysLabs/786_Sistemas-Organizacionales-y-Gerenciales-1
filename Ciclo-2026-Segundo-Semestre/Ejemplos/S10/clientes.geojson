@@ -1,0 +1,175 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "C001",
+        "nombre": "Supermercado La Económica",
+        "segmento": "Mayorista",
+        "zona": "Zona 1",
+        "ventas_trimestre_Q": 48500
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.5133,
+          14.6407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "C002",
+        "nombre": "Tienda Don Chepe",
+        "segmento": "Minorista",
+        "zona": "Zona 6",
+        "ventas_trimestre_Q": 6200
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.5,
+          14.655
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "C003",
+        "nombre": "Cafetería Reforma",
+        "segmento": "Horeca",
+        "zona": "Zona 10",
+        "ventas_trimestre_Q": 12800
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.51,
+          14.6
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "C004",
+        "nombre": "Abarrotería El Sol",
+        "segmento": "Minorista",
+        "zona": "Mixco",
+        "ventas_trimestre_Q": 5400
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.6064,
+          14.6333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "C005",
+        "nombre": "Distribuidora del Sur",
+        "segmento": "Mayorista",
+        "zona": "Villa Nueva",
+        "ventas_trimestre_Q": 61200
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.5875,
+          14.5269
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "C006",
+        "nombre": "Hotel Las Américas",
+        "segmento": "Horeca",
+        "zona": "Zona 13",
+        "ventas_trimestre_Q": 23900
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.53,
+          14.585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "C007",
+        "nombre": "Mini Súper Zona 18",
+        "segmento": "Minorista",
+        "zona": "Zona 18",
+        "ventas_trimestre_Q": 7100
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.48,
+          14.65
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "C008",
+        "nombre": "Restaurante El Portal",
+        "segmento": "Horeca",
+        "zona": "Zona 1",
+        "ventas_trimestre_Q": 9800
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.514,
+          14.643
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "C009",
+        "nombre": "Comercial San Cristóbal",
+        "segmento": "Mayorista",
+        "zona": "Mixco",
+        "ventas_trimestre_Q": 39400
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.58,
+          14.605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "C010",
+        "nombre": "Tienda La Bendición",
+        "segmento": "Minorista",
+        "zona": "Zona 11",
+        "ventas_trimestre_Q": 4800
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -90.545,
+          14.61
+        ]
+      }
+    }
+  ]
+}
